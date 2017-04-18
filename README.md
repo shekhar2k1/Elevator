@@ -1,11 +1,11 @@
-Assumption:
+**Assumption:**
 
 1)	Since floor drop info is not given, I am generating source/destination floor and based on that up/down decision is made
 2)	People can get in the elevator only it is stationary or going in their desired direction.
 3)	Since there can be multiple people/elevator. Each elevator has a max capacity.
 4)	No individual function for querying the state of an elevator, Instead each command will show states of all the elevator.
 
-Algorithm:
+**Algorithm:**
 
 The solution to select an elevator takes into account people going in only one direction at one time. What it means is Elevators cannot queue up request in both directions.
 
@@ -25,7 +25,7 @@ Elevators go only up till last floor requested in any direction.
 Elevators keep waiting at their respective floors when there are no requests.
 
 
-Implementation:
+**Implementation:**
 
 class Request: Request by a passenger (source and destination information)
 class Elevator: Information about particular Elevator (includes id, floor, direction, num of people in this elevator, max capacity of elevator, moving or stationary)
@@ -33,15 +33,14 @@ class ElevatorControlSystem: Elevator control sub system. Keeps track of all ele
 class elev_scheduling: A scheduling algorithm class which can be passed to Elevator subsystem. It makes a decision based on elevator current status, moving direction, current capacity etc.. I am using SCAN algorithm but another elevator scheduling algorithm can be passed. It needs to be subclassed but because of time constraint I did not do it.
 
 
-I am attaching two files. Both have same code.
+**I am attaching two files. Both have same code.**
 
-Auto_elevator.py: auto generates and runs complete requests and always steps after a request. In the end it steps until it finishes all the requests (20 default).
+*Auto_elevator.py: auto generates and runs complete requests and always steps after a request. In the end it steps until it finishes all the requests (20 default).*
 
-Manual_elevator.py:
-this file needs to be tested manually.
-You can specify the parameters like number of elevators or just run it with default params.
+*Manual_elevator.py: this file needs to be tested manually.You can specify the parameters like number of elevators or just run it with default params.*
 Once we run it, only two inputs  are allowed
 1)	step
 2)	src_int_floor_id1  dst_int_floord_id_2 (two integers separated by space)
+
 
 All elevator status will be shown after each command.
