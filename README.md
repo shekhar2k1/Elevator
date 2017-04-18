@@ -5,6 +5,11 @@
 3)	Since there can be multiple people/elevator. Each elevator has a max capacity.
 4)	No individual function for querying the state of an elevator, Instead each command will show states of all the elevator.
 
+**Each show will display Wait list, which is people/request waiting for each elevator** 
+
+**and Request serving List which is request which are already in elevator and travelling**
+
+
 **Algorithm:**
 
 The solution to select an elevator takes into account people going in only one direction at one time. What it means is Elevators cannot queue up request in both directions.
