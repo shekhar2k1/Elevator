@@ -1,6 +1,6 @@
 Assumption:
 
-1)	Since floor pick/drop info is not given, I am generating source/destination floor and based on that up/down decision is made
+1)	Since floor drop info is not given, I am generating source/destination floor and based on that up/down decision is made
 2)	People can get in the elevator only it is stationary or going in their desired direction.
 3)	Since there can be multiple people/elevator. Each elevator has a max capacity.
 4)	No individual function for querying the state of an elevator, Instead each command will show states of all the elevator.
