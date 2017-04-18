@@ -10,8 +10,11 @@ Algorithm:
 The solution to select an elevator takes into account people going in only one direction at one time. What it means is Elevators cannot queue up request in both directions.
 
 Let's say elevator A is at level 6 and all elevators others are on level zero
+
 If two requests arrive, Request1: Level5 to Level6 and Request2: Level5 to Level4. Even though elevator A is closer for both of these requests it will pick only one and other will be served by another elevator (Lets' say Elevator B)
+
 If elevator B is still far away by the time Request1 is finished by elevator A and if it closer to serve the second request as well then we reassign Request2 to elevator A.
+
 As soon as a user requests an elevator we put it in wait queue of a particular elevator which is closest at that point of time. Wait queue is just for waiting and it doesn't ensure ride in that particular elevator. Now at each STEP we keep changing the assignment of this request if required (if it is not already served). 
 
 
